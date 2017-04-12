@@ -89,7 +89,7 @@ colnames(allmerge)
 str(allmerge)
 
 ### Saves the resulting dataframe as a csv file
-write.csv(allmerge, "./allmerge_tidy.csv")
+write.table(allmerge, "./allmerge_tidy.txt")
 
 ### Summarizing per test subject on each performed activity
 allmerge_agg <- 
@@ -176,7 +176,7 @@ allmerge_agg <-
             avg_FreqBodyBodyGyroJerkMagMeanFreq = mean(FreqBodyBodyGyroJerkMagMeanFreq, na.rm = TRUE)
   )
 
-write.csv(allmerge_agg, "./allmerge_aggregated.csv")
+write.table(allmerge_agg, "./allmerge_aggregated.txt")
 
 
             
